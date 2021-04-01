@@ -1,5 +1,10 @@
-import Head from "next/head";
+import Head from 'next/head'
+import Nabvar from '../components/Nabvar'
 
 export default function Home() {
-	return <></>;
+    return (
+        <>
+          <Nabvar/>
+        </>
+    )
 }
