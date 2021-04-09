@@ -1,28 +1,43 @@
-import AppLayout from '../AppLayout'
+
 import Link from 'next/link'
 
 export default function Nabvar({}) {
     return (
         <>
-            <div className="text-center w-full">
-                <div className="bg-darked flex justify-start">
-                    <div className="text-secundaryRed p-4 m-2">eStreet</div>
-                </div>
-                <div className="bg-primaryRed flex justify-between text-primaryColor ">
-                    <div className="p-4 m-2">
-                        Pagina web para reportar casos de emergencia
-                    </div>
-                    <div className="flex justify-start">
-                        <div className="p-4 m-2">
-                            <Link href="/login">Login</Link>
+            <div className="w-full max-w-6xl min-w-0 mx-auto px-6">
+                <div className="flex mt-12 bg-gray-200 rounded-md shadow">
+                    <div className="w-64 bg-gray-800 rounded-l-md border-r border-dashed border-gray-800">
+                        <div className="flex justify-center items-center h-32 text-red-300 text-center font-semibold text-3xl italic">
+                            eStreet
                         </div>
-                        <div className="p-4 m-2">
-                            <Link href="/registro">Registrate</Link>
+                        <div className="mt-8 border-t border-red-200">
+                            
+                            <a
+                                href="/login"
+                                className="block py-3 px-6 text-red-300 font-semibold border-b border-red-300"
+                            >
+                                Login
+                            </a>
+                            <a
+                                href="/registro"
+                                className="block py-3 px-6 text-red-300 font-semibold border-b border-red-300"
+                            >
+                                Resgistrate
+                            </a>
+                            <a
+                                href="#"
+                                className="block py-3 px-6 text-red-300 font-semibold border-b border-red-300"
+                            >
+                                Consejos
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div className=" flex-grow">   
+                        <img className="w-full h-auto" src="/emergency.png" />
                         </div>
                     </div>
                 </div>
-                <img className="w-full h-auto" src="/emergency.png" />
-            </div>
         </>
     )
 }
