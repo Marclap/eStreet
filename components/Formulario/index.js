@@ -3,25 +3,18 @@ import Link from 'next/link'
 export default function Formulario() {
     return (
         <>
-            {/* component */}
-            <div className="w-full max-w-6xl min-w-0 mx-auto px-6">
-                <div className="flex mt-12 bg-white rounded-md shadow">
-                    <div className="w-64 bg-red-100 rounded-l-md border-r border-dashed border-red-200">
-                        <div className="flex justify-center items-center h-32 text-red-700 text-center font-semibold text-3xl italic">
+            <div className="w-full ">
+                <div className="flex  bg-gray-200  shadow">
+                    <div className="w-64 bg-gray-800 border-gray-800">
+                        <div className="flex justify-center items-center h-32 text-red-300 text-center font-semibold text-3xl italic">
                             eStreet
                         </div>
                         <div className="mt-8 border-t border-red-200">
                             <a
                                 href="/login"
-                                className="block py-3 px-6 text-red-700 font-semibold border-b border-red-200"
+                                class="block py-3 px-6 text-red-700 font-semibold border-b border-red-200"
                             >
-                                Iniciar Sesion.
-                            </a>
-                            <a
-                                href="/registro"
-                                className="block py-3 px-6 bg-red-900 text-red-100 font-semibold border-b border-red-200"
-                            >
-                                Registrate
+                                Login
                             </a>
                             <a
                                 href="#"
@@ -29,66 +22,77 @@ export default function Formulario() {
                             >
                                 Consejos
                             </a>
-                            
                         </div>
                     </div>
                     <div className="flex-grow">
                         <div className="flex flex-col mx-40 mt-20">
                             <div className="flex items-center mb-4">
-                                <label
-                                    className="w-24 font-semibold text-gray-700"
-                                >
+                                <label className="w-24 font-semibold text-gray-700">
                                     Nombres (S)
                                 </label>
                                 <input
                                     type="text"
                                     className="flex-grow border border-red-200 rounded py-1 px-3"
-                                    placeholder="Nombre"
+                                    placeholder="Nombres"
                                 />
                             </div>
                             <div className="flex items-center mb-4">
-                                <label
-                                    className="w-24 font-semibold text-gray-700"
-                                >
+                                <label className="w-24 font-semibold text-gray-700">
                                     Apellidos
                                 </label>
                                 <input
                                     type="text"
                                     className="flex-grow border border-red-200 rounded py-1 px-3"
-                                    placeholder="Username"
+                                    placeholder="Apellidos"
                                 />
                             </div>
                             <div className="flex items-center mb-4">
-                                <label
-                                    htmlFor="password"
-                                    className="w-24 font-semibold text-gray-700"
-                                >
-                                    Password
+                                <label className="w-24 font-semibold text-gray-700">
+                                    Fecha de nacimiento
                                 </label>
                                 <input
-                                    type="password"
+                                    type="text"
                                     className="flex-grow border border-red-200 rounded py-1 px-3"
-                                    placeholder="Password"
+                                    placeholder="Fecha de nacimiento"
                                 />
                             </div>
                             <div className="flex items-center mb-4">
-                                <textarea
-                                    name="description"
+                                <label className="w-24 font-semibold text-gray-700">
+                                    Cedúla
+                                </label>
+                                <input
+                                    type="text"
                                     className="flex-grow border border-red-200 rounded py-1 px-3"
-                                    id="description"
-                                    rows={8}
-                                    defaultValue={''}
+                                    placeholder="Cedúla"
                                 />
                             </div>
                             <div className="flex items-center mb-4">
-                                <button className="py-1 px-4 bg-red-800 text-red-100 font-semibold hover:bg-red-900 hover:shadow border border-red-200 rounded mr-2">
-                                    Submit
-                                </button>
-                                <button className="py-1 px-4 bg-white text-red-700 font-semibold hover:shadow border border-red-200 rounded">
-                                    Cancel
-                                </button>
+                                <label className="w-24 font-semibold text-gray-700">
+                                    Email
+                                </label>
+                                <input
+                                    type="text"
+                                    className="flex-grow border border-red-200 rounded py-1 px-3"
+                                    placeholder="Email"
+                                />
+                            </div>
+                            <div className="flex items-center mb-4">
+                                <label className="w-24 font-semibold text-gray-700">
+                                    Contraseña
+                                </label>
+                                <input
+                                    type="text"
+                                    className="flex-grow border border-red-200 rounded py-1 px-3"
+                                    placeholder="Contraseña"
+                                />
                             </div>
                         </div>
+                    </div>
+
+                    <div className="flex items-center mb-4">
+                        <button className="py-1 px-4 bg-red-800 text-red-100 font-semibold hover:bg-red-900 hover:shadow border border-red-200 rounded mr-2">
+                            Entrar
+                        </button>
                     </div>
                 </div>
             </div>
