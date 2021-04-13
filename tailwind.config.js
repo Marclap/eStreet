@@ -7,10 +7,16 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                darked: '#1b1717',
-                primaryRed: '#810000',
-                secundaryRed: '#ce1212',
-                primaryColor: '#eeebdd',
+                richBlackFogra: '#0B090A',
+                eerieBlack: '#161A1D',
+                bloodRed: '#660708',
+                rubyRed: '#A4161A',
+                carnelian: '#BA181B',
+                imperialRed: '#E5383B',
+                silverChalice: '#B1A7A6',
+                lightGray: '#D3D3D3',
+                cultured: '#F5F3F4',
+                white: '#FFFFFF',
             },
         },
     },

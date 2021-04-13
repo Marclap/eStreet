@@ -1,8 +1,12 @@
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 export default function home() {
     return (
         <>
+            <Head>
+                <title>eStreet | Inicio</title>
+            </Head>
             <div className="container mx-auto text-center">
                 <div className="bg-gray-800 flex justify-start">
                     <div className="text-red-500 p-4 m-2">eStreet</div>

@@ -4,7 +4,10 @@ import Nabvar from '../components/Nabvar'
 export default function Home() {
     return (
         <>
-          <Nabvar/>
+            <Head>
+                <title>eStreet</title>
+            </Head>
+            <Nabvar />
         </>
     )
 }

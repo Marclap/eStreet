@@ -1,98 +1,93 @@
-import { useSate } from 'next'
 import Link from 'next/link'
+
 export default function Formulario() {
     return (
         <>
-            <div className="w-full ">
-                <div className="flex  bg-gray-200  shadow">
-                    <div className="w-64 bg-gray-800 border-gray-800">
-                        <div className="flex justify-center items-center h-32 text-red-300 text-center font-semibold text-3xl italic">
-                            eStreet
-                        </div>
-                        <div className="mt-8 border-t border-red-200">
-                            <a
-                                href="/login"
-                                class="block py-3 px-6 text-red-700 font-semibold border-b border-red-200"
-                            >
-                                Login
+            <div className="w-full">
+                <div className="flex bg-lightGray shadow">
+                    <div className="w-64 h-screen bg-eerieBlack border-eerieBlack ">
+                        <Link href="/">
+                            <a>
+                                <div className="logo">eStreet</div>
                             </a>
-                            <a
-                                href="#"
-                                className="block py-3 px-6 text-red-700 font-semibold border-b border-red-200"
-                            >
-                                Consejos
-                            </a>
+                        </Link>
+                        <div className="mt-8 border-t border-imperialRed">
+                            <Link href="/login">
+                                <a className="elementosSideBar">
+                                    Iniciar Sesión
+                                </a>
+                            </Link>
+                            <Link href="#">
+                                <a className="elementosSideBar">Consejos</a>
+                            </Link>
                         </div>
                     </div>
                     <div className="flex-grow">
-                        <div className="flex flex-col mx-40 mt-20">
-                            <div className="flex items-center mb-4">
-                                <label className="w-24 font-semibold text-gray-700">
-                                    Nombres (S)
-                                </label>
+                        <div className="contenedorInputs">
+                            <div className="contenedorInput">
+                                <label className="label">Nombre(s)</label>
                                 <input
                                     type="text"
-                                    className="flex-grow border border-red-200 rounded py-1 px-3"
-                                    placeholder="Nombres"
+                                    className="input"
+                                    placeholder="Nombre(s)"
                                 />
                             </div>
-                            <div className="flex items-center mb-4">
-                                <label className="w-24 font-semibold text-gray-700">
-                                    Apellidos
-                                </label>
+                            <div className="contenedorInput">
+                                <label className="label">Apellidos</label>
                                 <input
                                     type="text"
-                                    className="flex-grow border border-red-200 rounded py-1 px-3"
+                                    className="input"
                                     placeholder="Apellidos"
                                 />
                             </div>
-                            <div className="flex items-center mb-4">
-                                <label className="w-24 font-semibold text-gray-700">
+                            <div className="contenedorInput">
+                                <label className="label">
                                     Fecha de nacimiento
                                 </label>
                                 <input
                                     type="text"
-                                    className="flex-grow border border-red-200 rounded py-1 px-3"
+                                    className="input"
                                     placeholder="Fecha de nacimiento"
                                 />
                             </div>
-                            <div className="flex items-center mb-4">
-                                <label className="w-24 font-semibold text-gray-700">
-                                    Cedúla
-                                </label>
+                            <div className="contenedorInput">
+                                <label className="label">Cedúla</label>
                                 <input
                                     type="text"
-                                    className="flex-grow border border-red-200 rounded py-1 px-3"
+                                    className="input"
                                     placeholder="Cedúla"
                                 />
                             </div>
-                            <div className="flex items-center mb-4">
-                                <label className="w-24 font-semibold text-gray-700">
-                                    Email
-                                </label>
+                            <div className="contenedorInput">
+                                <label className="label">Email</label>
                                 <input
                                     type="text"
-                                    className="flex-grow border border-red-200 rounded py-1 px-3"
+                                    className="input"
                                     placeholder="Email"
                                 />
                             </div>
-                            <div className="flex items-center mb-4">
-                                <label className="w-24 font-semibold text-gray-700">
-                                    Contraseña
-                                </label>
+                            <div className="contenedorInput">
+                                <label className="label">Contraseña</label>
                                 <input
-                                    type="text"
-                                    className="flex-grow border border-red-200 rounded py-1 px-3"
+                                    type="password"
+                                    className="input"
                                     placeholder="Contraseña"
                                 />
                             </div>
+                            <div className="contenedorInput">
+                                <label className="label">
+                                    Repita la contraseña
+                                </label>
+                                <input
+                                    type="password"
+                                    className="input"
+                                    placeholder="Repita la contraseña"
+                                />
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="flex items-center mb-4">
-                        <button className="py-1 px-4 bg-red-800 text-red-100 font-semibold hover:bg-red-900 hover:shadow border border-red-200 rounded mr-2">
-                            Entrar
-                        </button>
+                        <div className="contenedorBoton">
+                            <button className="btn">Registrarse</button>
+                        </div>
                     </div>
                 </div>
             </div>

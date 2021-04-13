@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.label {
+    @apply w-24 font-semibold text-richBlackFogra
+}
+
+.input {
+    @apply flex-grow border border-silverChalice rounded py-1 px-3
+}
+
+.elementosSideBar {
+    @apply block py-3 px-6 text-imperialRed font-semibold border-b border-imperialRed
+}
+
+.btn {
+    @apply py-1 px-4 bg-rubyRed text-white font-semibold hover:bg-carnelian hover:shadow border border-cultured rounded mr-2
+}
+
+.logo {
+    @apply flex justify-center items-center h-32 text-imperialRed text-center font-semibold text-3xl italic
+}
+
+.contenedorInput {
+    @apply flex items-center mb-4
+}
+
+.contenedorInputs {
+    @apply flex flex-col mx-40 mt-20
+}
+
+.contenedorBoton {
+    @apply flex flex-col items-center mb-4
+}
