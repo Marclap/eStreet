@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Nabvar({}) {
+export default function Nabvar() {
     return (
         <>
             <div className="w-full">

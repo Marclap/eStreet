@@ -1,0 +1,16 @@
+{
+    "plugins" : [],
+    "source": {
+        "include": ["pages", "components"],
+        "includePattern": ".js$",
+        "excludePattern": "(node_modules|.next|docs)"
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "opts": {
+        "recurse": "true",
+        "destination": "./docs"
+    }
+}
