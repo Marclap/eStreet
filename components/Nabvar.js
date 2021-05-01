@@ -20,7 +20,7 @@ export default function Nabvar() {
                             <Link href="/registro">
                                 <a className="elementosSideBar">Resgistrarse</a>
                             </Link>
-                            <Link href="#">
+                            <Link href="/consejos">
                                 <a className="elementosSideBar">Consejos</a>
                             </Link>
                         </div>

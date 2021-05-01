@@ -17,7 +17,7 @@ export default function Formulario() {
                                     Iniciar Sesión
                                 </a>
                             </Link>
-                            <Link href="#">
+                            <Link href="/consejos">
                                 <a className="elementosSideBar">Consejos</a>
                             </Link>
                         </div>
