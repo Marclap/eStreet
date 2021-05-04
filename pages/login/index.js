@@ -19,7 +19,7 @@ export default function login() {
                             <Link href="/registro">
                                 <a className="elementosSideBar">Registrarse</a>
                             </Link>
-                            <Link href="#">
+                            <Link href="/consejos">
                                 <a className="elementosSideBar">Consejos</a>
                             </Link>
                         </div>
@@ -45,6 +45,12 @@ export default function login() {
                         </div>
                         <div className="contenedorBoton">
                             <button className="btn">Entrar</button>
+                        </div>
+                        <div className="contenedorBoton">
+                            <p>¿Has olvidado la contraseña?</p>
+                            <Link href="#">
+                                <a className="text-bloodRed">Has click aquí</a>
+                            </Link>
                         </div>
                     </div>
                 </div>

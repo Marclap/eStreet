@@ -14,7 +14,7 @@ export default function Formulario() {
                         <div className="mt-8 border-t border-imperialRed">
                             <Link href="/login">
                                 <a className="elementosSideBar">
-                                    Iniciar Sesión
+                                    Iniciar sesión
                                 </a>
                             </Link>
                             <Link href="/consejos">

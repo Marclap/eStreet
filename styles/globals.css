@@ -3,33 +3,44 @@
 @tailwind utilities;
 
 .label {
-    @apply w-24 font-semibold text-richBlackFogra
+    @apply w-24 font-semibold text-richBlackFogra;
 }
 
 .input {
-    @apply flex-grow border border-silverChalice rounded py-1 px-3
+    @apply flex-grow border border-silverChalice rounded py-1 px-3;
 }
 
 .elementosSideBar {
-    @apply block py-3 px-6 text-imperialRed font-semibold border-b border-imperialRed
+    @apply block py-3 px-6 text-imperialRed font-semibold border-b border-imperialRed;
 }
 
 .btn {
-    @apply py-1 px-4 bg-rubyRed text-white font-semibold hover:bg-carnelian hover:shadow border border-cultured rounded mr-2
+    @apply py-1 px-4 bg-rubyRed text-white font-semibold hover:bg-carnelian hover:shadow border border-cultured rounded mr-2;
 }
 
 .logo {
-    @apply flex justify-center items-center h-32 text-imperialRed text-center font-semibold text-3xl italic
+    @apply flex justify-center items-center h-32 text-imperialRed text-center font-semibold text-3xl italic;
 }
 
 .contenedorInput {
-    @apply flex items-center mb-4
+    @apply flex items-center mb-4;
 }
 
 .contenedorInputs {
-    @apply flex flex-col mx-40 mt-20
+    @apply flex flex-col mx-40 mt-20;
 }
 
 .contenedorBoton {
-    @apply flex flex-col items-center mb-4
+    @apply flex flex-col items-center mb-4;
+}
+
+.form-tick:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+    background-size: 100% 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.checkbox {
+    @apply form-tick appearance-none h-6 w-6 border border-silverChalice rounded-md checked:bg-carnelian checked:border-transparent focus:outline-none;
 }

@@ -1,6 +1,6 @@
 module.exports = {
     purge: [
-        './page/**/*{js, ts, jsx,, tsx}',
+        './page/**/*.{js, ts, jsx,, tsx}',
         './components/**/*.{js, ts, jsx, tsx}',
     ],
     darkMode: false, // or 'media' or 'class'
@@ -21,7 +21,10 @@ module.exports = {
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            backgroundColor: ['checked'],
+            borderColor: ['checked'],
+        },
     },
     plugins: ['tailwindcss'],
 }
