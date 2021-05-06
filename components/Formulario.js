@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import FechaRegistro from './FechaRegistro'
 
 export default function Formulario() {
     return (
@@ -41,14 +42,7 @@ export default function Formulario() {
                                 />
                             </div>
                             <div className="contenedorInput">
-                                <label className="label">
-                                    Fecha de nacimiento
-                                </label>
-                                <input
-                                    type="text"
-                                    className="input"
-                                    placeholder="Fecha de nacimiento"
-                                />
+                                <FechaRegistro />
                             </div>
                             <div className="contenedorInput">
                                 <label className="label">Cedúla</label>
