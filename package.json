@@ -9,6 +9,9 @@
     "docs": "jsdoc -c jsdoc.json"
   },
   "dependencies": {
+    "@geist-ui/react": "^2.1.5",
+    "firebase": "^8.5.0",
+    "firebase-admin": "^9.7.0",
     "jsdoc": "^3.6.6",
     "leaflet": "^1.7.1",
     "leaflet-defaulticon-compatibility": "^0.1.1",
