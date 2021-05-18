@@ -12,11 +12,6 @@ export default function Home() {
                 <title>eStreet</title>
             </Head>
             <Nabvar />
-            <main>
-                <div id="map">
-                    <MapWithNoSSR />
-                </div>
-            </main>
         </>
     )
 }

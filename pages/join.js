@@ -21,7 +21,7 @@ export default function Join() {
             if (!user) {
                 throw new Error('The was an issue authorizing')
             }
-            Router.push('/')
+            Router.push('/mapa')
         } catch (error) {}
         setAuthorizing(false)
     }
