@@ -1,11 +1,36 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { Button } from '@geist-ui/react'
+import Router from 'next/router'
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import initFirebase from '../../services/firebase'
+import { useState } from 'react'
+
+initFirebase()
+
+const provider = new firebase.auth.GoogleAuthProvider()
 
 export default function login() {
+    const [authorizing, setAuthorizing] = useState(false)
+
+    const handleAuthentication = async () => {
+        setAuthorizing(true)
+        try {
+            const result = await firebase.auth().signInWithPopup(provider)
+            const { user, credential } = result
+            console.log({ user, credential })
+            if (!user) {
+                throw new Error('The was an issue authorizing')
+            }
+            Router.push('/mapa')
+        } catch (error) {}
+        setAuthorizing(false)
+    }
     return (
         <>
             <Head>
-                <title>eStreet | Iniciar sesión</title>
+                <title>eStreet | Entrar</title>
             </Head>
             <div className="w-full">
                 <div className="flex bg-lightGray shadow">
@@ -16,41 +41,22 @@ export default function login() {
                             </a>
                         </Link>
                         <div className="mt-8 border-t border-imperialRed">
-                            <Link href="/registro">
-                                <a className="elementosSideBar">Registrarse</a>
-                            </Link>
                             <Link href="/consejos">
                                 <a className="elementosSideBar">Consejos</a>
                             </Link>
                         </div>
                     </div>
-                    <div className="flex-grow">
-                        <div className="contenedorInputs">
-                            <div className="contenedorInput">
-                                <label className="label">Email:</label>
-                                <input
-                                    type="email"
-                                    className="input"
-                                    placeholder="Email"
-                                />
-                            </div>
-                            <div className="contenedorInput">
-                                <label className="label">Contraseña:</label>
-                                <input
-                                    type="password"
-                                    className="input"
-                                    placeholder="Contraseña"
-                                />
-                            </div>
-                        </div>
-                        <div className="contenedorBoton">
-                            <button className="btn">Entrar</button>
-                        </div>
-                        <div className="contenedorBoton">
-                            <p>¿Has olvidado la contraseña?</p>
-                            <Link href="#">
-                                <a className="text-bloodRed">Has click aquí</a>
-                            </Link>
+                    <div
+                        className="flex items-center w-full"
+                        style={{ backgroundImage: 'url("../background.png")' }}
+                    >
+                        <div className="grid justify-items-center w-full">
+                            <Button
+                                onClick={handleAuthentication}
+                                loading={authorizing}
+                            >
+                                Entrar
+                            </Button>
                         </div>
                     </div>
                 </div>

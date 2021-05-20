@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import dynamic from 'next/dynamic'
 
 export default function mapa() {
@@ -10,11 +11,29 @@ export default function mapa() {
             <Head>
                 <title>eStreet</title>
             </Head>
-            <main>
-                <div id="map">
-                    <MapWithNoSSR />
+            <div className="w-full">
+                <div className="flex bg-lightGray shadow">
+                    <div className="w-64 h-screen bg-eerieBlack border-eerieBlack ">
+                        <Link href="/mapa">
+                            <a>
+                                <div className="logo">eStreet</div>
+                            </a>
+                        </Link>
+                        <div className="mt-8 border-t border-imperialRed">
+                            <Link href="/consejos">
+                                <a className="elementosSideBar">Consejos</a>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="flex-grow">
+                        <main>
+                            <div id="map">
+                                <MapWithNoSSR />
+                            </div>
+                        </main>
+                    </div>
                 </div>
-            </main>
+            </div>
         </>
     )
 }

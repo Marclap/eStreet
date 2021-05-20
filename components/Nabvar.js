@@ -13,12 +13,7 @@ export default function Nabvar() {
                         </Link>
                         <div className="mt-8 border-t border-imperialRed">
                             <Link href="/login">
-                                <a className="elementosSideBar">
-                                    Iniciar Sesión
-                                </a>
-                            </Link>
-                            <Link href="/registro">
-                                <a className="elementosSideBar">Resgistrarse</a>
+                                <a className="elementosSideBar">Entrar</a>
                             </Link>
                             <Link href="/consejos">
                                 <a className="elementosSideBar">Consejos</a>

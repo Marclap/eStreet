@@ -1,4 +1,4 @@
-import { Button, useToasts } from '@geist-ui/react'
+import { Button } from '@geist-ui/react'
 import Router from 'next/router'
 import firebase from 'firebase/app'
 import 'firebase/auth'
@@ -23,7 +23,7 @@ export default function Join() {
             }
             Router.push('/mapa')
         } catch (error) {}
-        setAuthorizing(false)
+        //setAuthorizing(false)
     }
 
     return (

@@ -1,32 +1,61 @@
-export default function DatosServicios() {
+export default function DatosServicios({
+    load,
+    handleSetDatosAnterior,
+    handleInputChange,
+}) {
+    const none = load == true ? '' : 'hidden'
     return (
         <>
-            <div className="flex items-center justify-center">
+            <div className={none + ' flex items-center justify-center'}>
                 <div className="container">
                     <div className="flex justify-center p-4 mb-10">
                         <h3 className="text-xl">Describe el siniestro</h3>
                     </div>
                     <div className="flex justify-center">
                         <div className="bg-white shadow-xl rounded-lg w-1/2">
-                            <div className="">
-                                <label className="p-4">
-                                    <select className="w-full border bg-white rounded px-3 py-2 outline-none">
-                                        <option disabled>
-                                            Seleccione una prioridad
-                                        </option>
-                                        <option>Alta</option>
-                                        <option>Media</option>
-                                        <option>Baja</option>
-                                    </select>
+                            <div className="w-full m-1">
+                                <label className="ml-5">
+                                    Seleccione una prioridad:
                                 </label>
+                                <select
+                                    className="w-2/5 border bg-white rounded px-3 py-2 m-1 outline-none"
+                                    name="prioridad"
+                                    onChange={handleInputChange}
+                                >
+                                    <option value="1">Alta</option>
+                                    <option value="2">Media</option>
+                                    <option value="3">Baja</option>
+                                </select>
                             </div>
                             <div>
-                                <label></label>
-                                <textarea className="w-full px-3 py-2 text-silverChalice border rounded-lg focus:outline-none"></textarea>
+                                <label className="ml-5 mb-2">
+                                    De una descripción de lo que esta
+                                    ocurriendo:
+                                </label>
+                                <div className="flex justify-center mt-1">
+                                    <textarea
+                                        name="descripcion"
+                                        onChange={handleInputChange}
+                                        className="w-11/12 h-80 px-3 py-2 text-bloodRed border border-richBlackFogra rounded-lg focus:outline-none"
+                                    ></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div className="contenedorBoton">
-                            <button className="btn">Siguiente</button>
+                            <div className="flex justify-center">
+                                <div className="contenedorBoton">
+                                    <button
+                                        onClick={handleSetDatosAnterior}
+                                        className="btn"
+                                        type="button"
+                                    >
+                                        Anterior
+                                    </button>
+                                </div>
+                                <div className="contenedorBoton">
+                                    <button className="btn" type="submit">
+                                        Guardar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

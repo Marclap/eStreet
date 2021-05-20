@@ -3,9 +3,6 @@ import Nabvar from '../components/Nabvar'
 import dynamic from 'next/dynamic'
 
 export default function Home() {
-    const MapWithNoSSR = dynamic(() => import('../components/MapView'), {
-        ssr: false,
-    })
     return (
         <>
             <Head>
