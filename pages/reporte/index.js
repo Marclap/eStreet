@@ -1,3 +1,4 @@
+import Router from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -20,33 +21,27 @@ export default function reporte({ query }) {
         latitud,
         longitud,
     })
-
+    /* Ayuda a cambiar de pantalla entre seleccionar servicio y seleccionar siniestro*/
     const handleSetServicio = () => {
         setServicio(false)
         setDatos(true)
     }
-
+    /* Ayuda a cambiar de pantalla entre seleccionar servicio y seleccionar siniestro*/
     const handleSetDatosAnterior = () => {
         setServicio(true)
         setDatos(false)
     }
-
+    /* Guarda los datos en firebase*/
     const handleSetDatosGuardar = (event) => {
         event.preventDefault()
         console.log(informacion)
         database.child('reporte').push(informacion, (error) => {
             if (error) console.log(error)
         })
+        Router.push('/mapa')
     }
-
+    /* Actualiza los datos cuando se actualiza el valor de los inputs*/
     const handleInputChange = (event) => {
-        setInformacion({
-            ...informacion,
-            [event.target.name]: event.target.value,
-        })
-    }
-
-    const handleInputChangeEnte = (event) => {
         setInformacion({
             ...informacion,
             [event.target.name]: event.target.value,
@@ -72,7 +67,7 @@ export default function reporte({ query }) {
                             <SeleccionarServicio
                                 load={servicio}
                                 handleSetServicio={handleSetServicio}
-                                handleInputChangeEnte={handleInputChangeEnte}
+                                handleInputChange={handleInputChange}
                             />
                             <DatosServicios
                                 load={datos}

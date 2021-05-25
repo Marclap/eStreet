@@ -1,7 +1,7 @@
 export default function SeleccionarServicio({
     load,
     handleSetServicio,
-    handleInputChangeEnte,
+    handleInputChange,
 }) {
     const none = load == true ? '' : 'hidden'
     return (
@@ -20,7 +20,7 @@ export default function SeleccionarServicio({
                                             type="checkbox"
                                             className="checkbox"
                                             name="ente"
-                                            onChange={handleInputChangeEnte}
+                                            onChange={handleInputChange}
                                             value="Policia Nacional"
                                         />
                                         <span>Policia Nacional</span>
@@ -32,7 +32,7 @@ export default function SeleccionarServicio({
                                             type="checkbox"
                                             className="checkbox"
                                             name="ente"
-                                            onChange={handleInputChangeEnte}
+                                            onChange={handleInputChange}
                                             value="Bomberos Pereira"
                                         />
                                         <span>Bomberos Pereira</span>
@@ -44,7 +44,7 @@ export default function SeleccionarServicio({
                                             type="checkbox"
                                             className="checkbox"
                                             name="ente"
-                                            onChange={handleInputChangeEnte}
+                                            onChange={handleInputChange}
                                             value="Defensa Civil Colombiana"
                                         />
                                         <span>Defensa Civil Colombiana</span>
@@ -56,7 +56,7 @@ export default function SeleccionarServicio({
                                             type="checkbox"
                                             className="checkbox"
                                             name="ente"
-                                            onChange={handleInputChangeEnte}
+                                            onChange={handleInputChange}
                                             value="Transito Pereira"
                                         />
                                         <span>Transito Pereira</span>
@@ -68,7 +68,7 @@ export default function SeleccionarServicio({
                                             type="checkbox"
                                             className="checkbox"
                                             name="ente"
-                                            onChange={handleInputChangeEnte}
+                                            onChange={handleInputChange}
                                         />
                                         <span>Servicio Ambulancias S.A.P</span>
                                     </label>
