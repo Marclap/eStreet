@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Nabvar from '../components/Nabvar'
-import dynamic from 'next/dynamic'
 
 export default function Home() {
     return (

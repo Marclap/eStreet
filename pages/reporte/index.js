@@ -3,14 +3,22 @@ import Link from 'next/link'
 import { useState } from 'react'
 import DatosServicios from '../../components/DatosServicio'
 import SeleccionarServicio from '../../components/SeleccionarServicio'
+import initFirebase from '../../services/firebase'
 
-export default function reporte() {
+const database = initFirebase().database().ref()
+
+export default function reporte({ query }) {
+    console.log(query)
     const [servicio, setServicio] = useState(true)
     const [datos, setDatos] = useState(false)
+    const [latitud, setLatitud] = useState(0)
+    const [longitud, setLongitud] = useState(0)
     const [informacion, setInformacion] = useState({
         ente: [],
-        prioridad: '',
+        prioridad: 1,
         descripcion: '',
+        latitud,
+        longitud,
     })
 
     const handleSetServicio = () => {
@@ -26,6 +34,9 @@ export default function reporte() {
     const handleSetDatosGuardar = (event) => {
         event.preventDefault()
         console.log(informacion)
+        database.child('reporte').push(informacion, (error) => {
+            if (error) console.log(error)
+        })
     }
 
     const handleInputChange = (event) => {
